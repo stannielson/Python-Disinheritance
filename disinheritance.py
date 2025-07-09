@@ -3,7 +3,6 @@ types
 """
 
 
-from dataclasses import dataclass
 from functools import wraps
 from inspect import getabsfile
 from inspect import getmodule
