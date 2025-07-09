@@ -26,21 +26,15 @@ class disinherit:
     object type, except where specified by the exempt keyword argument
     
     - exemptions are applied in order of argument declaration
-    
     - exemptions not available through inheritance or overridden in the
       target type are ignored
-      
     - functionally required "origin" object methods will be retained
-    
     - disinherited methods/attributes are replaced with NotImplemented in
       the target type
-      
       -> NotImplemented methods/attributes are ignored in dir() calls for
          and produce an AttributeError when retrieved from target type
          instances
-        
       -> provides explicit status in help() call on target type
-      
       -> use ensures reversion back to disinheritance if used for
          assignment but deleted in instances
     """
