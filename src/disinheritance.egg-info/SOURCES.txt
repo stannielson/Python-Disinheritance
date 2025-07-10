@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/disinheritance/__init__.py
+src/disinheritance/_disinherit.py
+src/disinheritance.egg-info/PKG-INFO
+src/disinheritance.egg-info/SOURCES.txt
+src/disinheritance.egg-info/dependency_links.txt
+src/disinheritance.egg-info/top_level.txt
