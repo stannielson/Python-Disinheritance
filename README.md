@@ -3,7 +3,7 @@
 
 When other approaches are impractical, the `disinheritance` module may be a viable alternative. The `disinherit` decorator object automatically overrides unwanted inherited methods and attributes and prevents their use in subclass instances, except where specified as exemptions. Features of `disinherit` include:
 
-* Exemptions can be one or more type methods/attributes or even entire types in the subclass MRO (though exemptions are managed internally by type/containing type and declaration order)
+* Exemptions can be one or more type methods or even entire types in the subclass MRO (though exemptions are managed internally by type/containing type and declaration order)
 * Exemptions can be from anywhere in the MRO and will be applied to the subclass as overrides (unless already overriden in the subclass)
 * `dir()` call on a subclass instance will not include disinherited methods/attributes
 * Attempts at attribute retrieval of disinherited methods/attributes from an instance produce attribute errors
@@ -11,6 +11,7 @@ When other approaches are impractical, the `disinheritance` module may be a viab
 * Invalid exemptions (i.e., types and type methods/attributes not in the MRO) are silently ignored
 * Subclass `__dir__` and `__getattribute__` methods are wrapped to both maintain original functionality and account for disinherited methods/attributes
 * Exemptions are explicitly specified using an `exempt` keyword argument for the sake of clarity and deliberate use in style
+* _Note: type attributes cannot be directly referenced for exemptions where an attribute does not back-reference the containing type_
 
 ## Example:
 ```
